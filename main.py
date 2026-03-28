@@ -6,7 +6,7 @@ import os
 def list_items():
     print("\n--- Current Files and Folders ---")
     p = Path(".")
-    items = list(p.glob('*')) # rglob('*') ki jagah glob('*') use kiya hai taaki sirf current folder dikhe (saaf dikhta hai)
+    items = list(p.glob('*'))
     if not items:
         print("Empty Directory")
     for i, item in enumerate(items):
@@ -19,7 +19,7 @@ def create_folder():
     try:
         name = input("Enter new folder name: ")
         p = Path(name)
-        p.mkdir(exist_ok=True) # Agar pehle se ho toh error nahi dega
+        p.mkdir(exist_ok=True) 
         print(f"Folder '{name}' created successfully.")
     except Exception as err:
         print(f"Error: {err}")
@@ -44,7 +44,7 @@ def delete_folder():
         name = input("Enter folder name to delete (ALL contents will be deleted): ")
         p = Path(name)
         if p.exists() and p.is_dir():
-            # IMPORTANT: shutil.rmtree non-empty folders ko delete karta hai
+           
             shutil.rmtree(p)
             print(f"Folder '{name}' deleted successfully.")
         else:
@@ -59,7 +59,7 @@ def create_file():
         p = Path(name)
         if not p.exists():
             data = input("Enter content for the file: ")
-            p.write_text(data) # Pathlib ka asan tareeka
+            p.write_text(data)
             print("File created successfully.")
         else:
             print("File already exists.")
