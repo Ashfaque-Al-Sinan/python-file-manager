@@ -1,23 +1,36 @@
 # python-file-manager
 # 📂 Terminal-Based File Manager (Python)
 
-Ek simple aur powerful Command Line Interface (CLI) tool jo aapko files aur folders manage karne mein madad karta hai. Isme `pathlib` aur `shutil` libraries ka use kiya gaya hai taaki file operations safe aur fast hon.
+A robust and user-friendly Command Line Interface (CLI) tool built with Python to manage files and directories. This project utilizes modern Python libraries like `pathlib` and `shutil` to ensure safe, cross-platform filesystem operations.
 
 ## ✨ Features
 
-- **Folder Operations**: Create, Rename, aur Delete (Recursive delete support ke saath).
-- **File Operations**: Create, Read, Delete.
-- **File Updates**: Aap file ko rename kar sakte hain, naya data append kar sakte hain, ya poori file overwrite kar sakte hain.
-- **Navigation**: Current directory ke saare items ko list karne ka feature.
-- **Error Handling**: `try-except` blocks ka use kiya gaya hai taaki invalid inputs par program crash na ho.
+- **Folder Management**: 
+  - Create new directories.
+  - Rename existing folders.
+  - **Recursive Delete**: Automatically handles non-empty folders (using `shutil.rmtree`).
+- **File Management**:
+  - Create new files with custom content.
+  - Read file contents directly in the terminal.
+  - Delete files securely.
+- **File Updates**:
+  - Rename files.
+  - Append new data to existing files.
+  - Overwrite file content.
+- **Real-time Listing**: View all items in the current directory with labels `[File]` or `[Folder]`.
+- **Error Handling**: Comprehensive `try-except` blocks to prevent crashes from invalid inputs or system errors.
 
 ## 🛠️ Technologies Used
 
 - **Language**: Python 3.x
-- **Libraries**: 
-  - `pathlib`: Modern object-oriented filesystem paths ke liye.
-  - `shutil`: High-level file operations (jaise non-empty folders delete karna) ke liye.
-  - `os`: Basic system interactions ke liye.
+- **Core Modules**:
+  - `pathlib`: For object-oriented filesystem paths.
+  - `shutil`: For high-level file operations (deleting non-empty trees).
+  - `os`: For basic operating system interactions.
 
-## 🚀 How to Run
-1.check the python is installed in your Pc
+## 🚀 Getting Started
+
+### Prerequisites
+Ensure you have Python 3 installed. Check by running:
+```bash
+python --version
